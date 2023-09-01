@@ -1,0 +1,17 @@
+MAMP環境構築
+
+以下のサイトを参考にして、phpファイルの表示まで出来ました。～
+
+https://teratail.com/questions/121074
+
+https://blanche-toile.com/web/windows-mamp
+
+https://codeforfun.jp/how-to-install-mamp-windows-and-mac/
+
+
+
+MAMPでWordPressローカル環境を構築する方法
+https://mikit-tz.com/wordpress-local-mamp-howto/
+
+このサイトだとMAMPのPortsを変えてますが、ワードプレスは
+Dockerに入れたらいいですか。

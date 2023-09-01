@@ -1,0 +1,33 @@
+https://pasomaki.com/sourcetree-add-localrepository/
+https://tech.noricgeographic.com/sourcetree%E3%81%A7%E6%97%A2%E5%AD%98%E3%81%AE%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%82%92github%E3%81%AB%E4%BD%9C%E3%81%A3%E3%81%9F%E3%83%AA%E3%83%9D/
+
+
+sourcetree
+
+ローカルレポジトリを増やす方法は簡単
+
+
+それをリモートレポジトリに繋げる、増やすとしたら、
+
+・リモートレポジトリ（１）作って、ローカルレポジトリ（１）を繋げる
+
+
+ローカルレポジトリを作る。→githubでリモートレポジトリを作る→
+
+このgithub上のリモートレポジトリのURLをコピー→[add a repository]
+
+→ローカルレポジトリの場所を指定し「追加」→リポジトリタブ、リモートを追加
+
+→リモート名はデフォ「origin」,URLにさっきコピーしたのを張り付けて「ok」その後は
+
+プッシュ（チェックボックスはチェックしておく）→githubで確認
+
+
+https://qiita.com/kokogento/items/bfaf0a45f442b5d2d265
+Github collaboratorsを使って複数人で開発する手順
+
+
+
+
+
+

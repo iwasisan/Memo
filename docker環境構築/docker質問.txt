@@ -1,0 +1,49 @@
+https://docs.docker.jp/config/pruning.html#id3
+
+https://www.public.ne.jp/2020/12/14/%E3%80%90docker%E3%80%91%E7%AC%AC13%E5%9B%9E%E3%80%80dockerdesktop%E3%81%AE%E3%83%80%E3%83%83%E3%82%B7%E3%83%A5%E3%83%9C%E3%83%BC%E3%83%89%E3%81%8C%E9%80%B2%E5%8C%96%EF%BC%81/
+
+docker内の整理を安全にしたい
+
+wordpressの環境構築を行う中で、どうも破棄しきれてないものがdocker内に
+ありそうと中の状態を見る中で感じた為。
+
+上記サイトを参考に
+docker image pruneなどを打ち込み、「不必要なものだけ」整理しようと試みました。
+
+docker image prune
+docker container prune
+docker volume prune
+docker network prune
+を打ち込み。
+
+docker volume pruneだけ整理の対象になったようで
+Total reclaimed space: 1.089GBなりました。
+
+他はTotal reclaimed space: 0Bとなり
+docker network pruneは特に何もないようでした。
+
+添付した画像から、まだ整理できそうな状態だと思うのですが、「安全に」整理するために
+出来る事はないでしょうか。
+
+・今の状態でも使えるので触らないのが無難だとは思いますが。
+
+
+
+添付した画像の操作はデリート以外は一通り触り、
+[edit file]ファイルの中身、コードを見たり触って変更できる
+[delete]消す
+[save]ダウンロードっぽい
+とわかったんですが、
+[import]を予想として、ファイルの更新とかって思いましたが、
+どうもDLしたindex.phpとか見当たらず、更新や書き換えなら[edit file]
+で良くないかと思い。何をする項目なのかと思い質問しました。
+
+ネットでもしらべましたが、コマンドプロンプト上で動かすようなもの
+しか見つからず、理解に結び付きませんでした。
+
+
+
+
+
+
+

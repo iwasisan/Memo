@@ -1,0 +1,128 @@
+https://blog.recruit.co.jp/rmp/infrastructure/post-11266/
+
+4e419dfb11d9   docker_test-wordpress-1
+
+【docker】wordpressをローカルに構築
+https://zenn.dev/persona/articles/50f87da99c92af
+こっちで環境構築を行った。
+mysqlに外部のクライアントが接続できるようにyml改修は試したが
+よく分からなかった。
+↓
+WordPressを動かしてみたが、ワンクリックで10秒くらい待たないと動かない
+↓
+ymlファイルを変更、早くなったが、何度か試す中でどうもwordpressの表示がおかしくなった。
+（どうもローカルPCにテーマやプラグインを持ってくる、同期させる設定だと変換が重い
+らしく動作が厳しい、そこから軽い動作環境をワンクリックで10秒待たないような。を
+重視し、変更した。多分そこで変更したり、ワードプレスを触っていく中でおそらくコンテナ内の
+データが汚くなったと思う。）
+↓
+なので、以下のコードを使ってみた。
+$ docker compose down --volumes --remove-orphans --rmi all
+すると、データは恐らくすべてリセットされ、アカウントも消えたみたいだった。
+↓
+再度ymiファイルだけの状態で作り直す。（動作の軽さ重視）
+↓
+アカウントをつくってリスタート
+（おそらくdocker compose down --volumes --remove-orphans --rmi allでアカウントを消してリセット出来る。）
+↓
+・ワードプレスの基本的な使い方。
+寺子屋を活用する。
+
+
+・ノーマルなミスのカバーの仕方（誤って要らないプラグインやテーマ等を入れてしまった。操作ミスのカバー、やり直し方）
+　・デモをインポートすると、そのサイトのサブページやそれに使われる画像もまたインポートされている
+　
+　・基本は保存の前に別の所クリックするとやり直しできる。また、同じ物を用意する（メニューだとURLとか名称が同じ）事も調べたら出来そう
+
+　ただ、分からないでいれたプラグインやテーマに付随して入ってきたものは「何がセットで入ってきたか」は忘れたり分かりにくい場合があるので、
+　初期の状態、現在の状態を把握し、「これを入れたから、これもセットで入ってきた」というのを解った方がいい。
+
+
+（https://meredy.org/plugin/demo/one-click-demo-import/）
+デモページ作成前の注意点
+本プラグインを使用した場合、自動で記事やメニュー、カテゴリなどが自動で作成されます。
+作成したデモデータは追加する一方で戻すことはできないので（手動で削除のみ）、使用する場合は必ず試験用のサブドメインやマルチドメインなどを作ってから試すようにしてください。
+
+気軽にセットで追加は出来るけど、「やり直しはしにくい」。手動で削除する場合困るのは、（セットで入ってくるけど、削除は1つずつでしかもセットで入ってきたのがどれか分からない
+っていう点）
+（侍の寺子屋でいうと、5.2 デモデータをインポートのあと、投稿とメディアが増えている。その後美容院用のデータを入れている。
+どの投稿にどのメディアが入ってる？今どこの何をさわってるかが見えにくいのが難点（デモデータをインポートして進めるサイト）
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+・vscodeとの連携の仕方。
+（php、htmlファイルの変更の仕方、誤って消したとき等の復旧の仕方）
+
+
+
+2022-02-05 docker compose down で環境をクリーンにする
+https://til.toshimaru.net/2022-02-05
+
+WordPressでGoogle検索に表示させないサイトにする方法
+https://shu-sait.com/kensaku-hyouji-noindex/
+
+
+https://brainlog.jp/server/docker/post-3106/
+ローカル環境でDocker×WordPressが重い問題を解決する
+
+
+functions.phpはローカルホストなので、
+…/wp-content/themes/[有効なテーマ名]/functions.php
+にある
+
+
+
+docker-compose.ymlフォルダの設定はこれをコピペするとワードプレス使えます。
+
+ユーザ作成やインストール済んでいるので
+↓でログインしてください。
+http://localhost:8000/wp-login.php
+
+
+version: '3'
+
+services:
+  db:
+    image: mysql:5.7
+    volumes:
+      - db_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: somewordpress
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+
+  wordpress:
+    depends_on:
+      - db
+    image: wordpress:latest
+    ports:
+      - "8000:80"
+    restart: always
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+
+    volumes:
+      - wp_data:/var/www/html #←変更
+      - ./wordpress/wp-content/themes/mytheme:/var/www/html/wp-content/themes/mytheme
+
+
+volumes:
+    db_data:
+    wp_data:

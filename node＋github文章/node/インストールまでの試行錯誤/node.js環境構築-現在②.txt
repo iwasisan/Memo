@@ -1,0 +1,91 @@
+その後
+
+「cd node」を開いてwebpackをインストール
+「npm i -D webpack webpack-cli」
+下記のメッセージが出る
+added 107 packages, and audited 506 packages in 13s
+
+29 packages are looking for funding
+  run `npm fund` for details
+
+6 high severity vulnerabilities
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+しかし、「webpack」「webpack-cli」のフォルダは出来ている。
+
+現状
+Desktop\node>npm ls
+node@1.0.0 C:\Users\ishida\Desktop\node
++-- chokidar@3.5.3
++-- glob-parent@6.0.2
++-- glob-stream@8.0.0
++-- glob-watcher@6.0.0
++-- gulp@4.0.2
++-- mysql@2.18.1
++-- vinyl-fs@4.0.0
++-- webpack-cli@5.1.4
+`-- webpack@5.88.2
+
+その後
+「npm run test」
+
+> node@1.0.0 test
+> echo "Error: no test specified" && exit 1
+
+"Error: no test specified"となる。
+https://webukatu.com/wordpress/blog/37659/#webpack-3
+
+webpack.config.jsは「webpack」のフォルダを作ったフォルダ内で
+サーチを掛けたが見つかりません。
+
+「cd node」を開いてwebpackをインストール
+「npm i  –save-dev webpack webpack-cli」
+下記のメッセージが出る
+added 107 packages, and audited 506 packages in 13s
+
+29 packages are looking for funding
+  run `npm fund` for details
+
+6 high severity vulnerabilities
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+しかし、「webpack」「webpack-cli」のフォルダは出来ている。
+
+現状
+Desktop\node>npm ls
+node@1.0.0 C:\Users\ishida\Desktop\node
++-- chokidar@3.5.3
++-- glob-parent@6.0.2
++-- glob-stream@8.0.0
++-- glob-watcher@6.0.0
++-- gulp@4.0.2
++-- mysql@2.18.1
++-- vinyl-fs@4.0.0
++-- webpack-cli@5.1.4
+`-- webpack@5.88.2
+
+「npm list -g --depth=0」
++-- ejs@3.1.9
+`-- npm-check-updates@16.12.2
+
+・寺子屋で聞き、特に修正などはなくてよい
+・gulpはグローバルでのインストール済みパッケージからはクリアされている
+事が分かる。
+
+
+
+

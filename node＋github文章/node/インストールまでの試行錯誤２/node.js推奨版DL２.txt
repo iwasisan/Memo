@@ -1,0 +1,58 @@
+node.js推奨版DL
+
+Eドライブにnodejsフォルダを作成し、そこにインストール
+
+コマンドプロンプト「node -v]でバージョン確認できインストール成功
+
+デスクトップにnodeフォルダを作成しそこでpackage.json作成
+
+gulpをそこでローカルインストール（エラー６）
+
+https://qiita.com/howdy39/items/1029e3df24ac42c7bd49
+postcssも上記サイト参照、gulpで使うらしいのでインストール
+
+webpackもインストール
+
+・https://qiita.com/shizen-shin/items/47c7c1a305ce3d152737
+・https://bagelee.com/design/css/5-years-from-post-css-present-and-future/
+postcssをベースに便利になるプラグインを確認
+（どうもプラグインを追加して自動的にベンダープレフィックスを追加させたりって機能を増やせるみたい）
+
+プラグイン
+・autoprefixerを追加
+（ベンダープレフィックスを付ける）
+
+https://qiita.com/y-w/items/bd7f11013fe34b69f0df
+・styellintを追加
+・stylelint-config-recommendedを追加
+（コードを実行する前に明らかなバグを見つけたりする、～configは最低限のルールの設定らしい）
+
+・postcss-sass
+（DartSass構文を解釈しCSS構文に変換するプラグイン）
+
+・doiuse
+（ブラウザ未対応によるスタイル崩れを防止）
+
+現在
+node@1.0.0 C:\Users\ishida\Desktop\node
++-- autoprefixer@10.4.15
++-- doiuse@6.0.2
++-- gulp-postcss@9.0.1
++-- gulp@4.0.2
++-- postcss-sass@0.5.0
++-- stylelint-config-recommended@13.0.0
++-- stylelint@15.10.3
++-- webpack-cli@5.1.4
+`-- webpack@5.88.2
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,51 @@
+node.js推奨版DL
+
+Eドライブにnodeフォルダを作成し、そこにインストール
+
+コマンドプロンプト「node -v]でバージョン確認できインストール成功
+
+デスクトップにnode1フォルダを作成しそこでpackage.json作成
+
+gulpをそこでローカルインストール（エラー６）
+
+https://ensei1375.com/npm-scripts/
+npmでsassコンパイルする環境を構築
+
+「postcss-cli」：CSSを変換できるツール「PostCSS」をコマンドから利用できるパッケージ
+CSSをSassっぽくする？
+
+「autoprefixer」：PostCSSでベンダープレフィックスを追加できるプラグインとなります
+cssの前についてる長い文
+
+「cssnano」は、PostCSSの枠組みの中でCSSを最適化するツール
+アルファベット順にしたり、表記を短いものに変えたりする。
+
+「sass」nodeでSassを使えるようにする。
+Sass(SCSS)の環境構築
+
+“scripts”: {}にnpmで動作させたいscriptを記述
+（ショートカットを設定する・・感じかな）
+・"prod": "run-s prod:sass prod:css",
+・"prod:sass": "sass ./assets/sass/style.sass:./assets/css/style.css --embed-source-map",
+・"prod:css": "postcss ./assets/css/style.css --replace",
+・"dev": "run-p dev:sass",
+・"dev:sass": "sass ./assets/sass/style.sass:./assets/css/style.css --embed-source-map -w"
+以上を設定（動きは分からない）
+
+
+https://qiita.com/howdy39/items/1029e3df24ac42c7bd49
+gulpで実行するためgulp-postcssをインストールします。（PostCSS本体はgulp-postcssに含まれています）
+PostCSS：CSSツールを作るためのフレームワーク
+
+jQueryをインストール
+npm install jquery
+
+package-lockが2個目出来る。
+調べたがよくわからない為消す。
+（gulpインストール後すでにあった）
+
+
+
+
+
+

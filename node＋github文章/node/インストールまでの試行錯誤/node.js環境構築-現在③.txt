@@ -1,0 +1,56 @@
+その後
+
+整理するため
+別のフォルダ「node2]を作成
+やはりgulpをローカルインストール時に
+6 high severity vulnerabilities出るが
+フォルダは作られている。
+
+https://qiita.com/riversun/items/7f1679509f38b1ae8adb
+その後上記のサイトを参考に
+git pullから
+npm testまで行い
+"test": "echo \"Error: no test specified\" && exit 1"
+とです。調べてみると
+package.jsonのtestがその値になっており
+特にエラーはないように思える。
+
+なおgit pullは
+fatal: not a git repository (or any of the parent directories): .git
+となり動いてない模様
+
+その後「npm install -D webpack webpack-cli」を行うと
+6 high severity vulnerabilitiesが表示されるが
+
+package.jsonは
+"name": "node2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  }
+
+となり
+
+Desktop\node2>npm list
+node2@1.0.0 C:\Users\ishida\Desktop\node2
++-- gulp@4.0.2
++-- webpack-cli@5.1.4
+`-- webpack@5.88.2
+
+となった。見た感じインストール出来てるように思えます。
+
+
+
+
+
+
+

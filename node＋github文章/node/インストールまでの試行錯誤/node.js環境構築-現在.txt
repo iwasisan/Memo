@@ -1,0 +1,128 @@
+node.js環境構築
+
+
+node,推奨版をインストール（Eドライブ）node_modulesフォルダが作られる。
+
+デスクトップにnodeフォルダ作成
+
+コマンドプロンプトで「node -v入力　v18.17.1と表示」
+C:\Users\ishida>node -v
+v18.17.1
+
+nodeフォルダに移動「cd desktop,cd node」
+
+package.json作成「npm init」（項目は初期設定のまま）
+
+「npm install mysql」
+
+https://labo.kon-ruri.co.jp/setup-nodejs/
+を参照にここまで
+現在「cd node」の場所
+
+そこでglupをローカルインストールの際
+6 high severity vulnerabilitiesと表示
+参考
+https://rinoguchi.net/2021/11/npm-version-up-and-fix-audit.html
+を見ながら行っていた際に起こった事です。
+
+グローバルインストールしてみると「～vulnerabilities」のようなものなくできた。
+「cd node」
+
+その後、npm install gulp@latest等アドバイスのコードを試しましたが
+「6 high severity vulnerabilities」は変わらなかったです。
+
+・インストールするドライブがダメなのかと思いEドライブで
+「グローバルインストール」「ローカルインストール」を試す。
+ローカルだけエラーがでてしまう。
+
+現時点では
+「gulp -v」
+CLI version: 2.3.0
+Local version: 4.0.2
+
+その後グローバルインストールはお勧めしない記事があった為
+「npm uninstall gulp -g」を入力
+
+「gulp -v」
+'gulp' は、内部コマンドまたは外部コマンド、
+操作可能なプログラムまたはバッチ ファイルとして認識されていません。
+
+「npx gulp -v」
+CLI version: 2.3.0
+Local version: 4.0.2
+
+グローバルはアンインストール出来たのか、ローカルではインストールきちっとされているのか
+よく分からない。
+
+現状色々触ったけど[gulpフォルダ]がどうなってるのか、複数出来ているんじゃないか
+と思いサーチ（3つ見つかる）
+
+Cドライブ
+C:\Users\ishida\AppData\Roaming\npm\node_modules
+該当の場所が隠しフォルダだとわかり
+「％appdata％」→node_modulesまで確認するもgulpフォルダは見当たらず。
+
+Eドライブ
+VScodeをインストールしたフォルダのextensionsフォルダにもgulpフォルダがある。
+デスクトップのフォルダ内にあったgulpフォルダとは中身が違う。（画像あり）
+
+デスクトップ上のnodeフォルダ
+中身のnode_modulesフォルダ内に
+gulpフォルダがある。（画像あり）
+(このフォルダ内にもnode_modulesフォルダがある。)
+
+
+「node_modulesフォルダ」は
+・デスクトップ上のnodeフォルダ内（中身多い　一番上が.bin）
+
+・nodeフォルダ→node_modulesフォルダ→gulpフォルダ内
+（中身は少し少ない　一番上がbinary-extensions）
+
+その後
+「cd node」
+「npm list」で見ると
+node@1.0.0 C:\Users\ishida\Desktop\node
++-- chokidar@3.5.3
++-- glob-parent@6.0.2
++-- glob-stream@8.0.0
++-- glob-watcher@6.0.0
++-- gulp@4.0.2
++-- mysql@2.18.1
+`-- vinyl-fs@4.0.0
+
+
+となっていました。
+
+今このような状態なのですが、環境構築を進める上で
+先に直した方がいい部分はありますでしょうか。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

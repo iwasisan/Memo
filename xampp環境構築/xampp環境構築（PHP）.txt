@@ -1,0 +1,35 @@
+・xampp環境構築について
+
+下記サイトをみながら
+
+①画面に[test]の文字を表示させる事が出来ました。
+
+②Xdebug３の導入はやってみて出来たかと思います。
+
+Xdebugについて
+多分：画面と、参考のモノは一部ｈの数字が違うけど
+恐らく＄ｈ＝15は15時台に確かめたからだと思われます。
+
+
+
+
+xampp環境構築（PHP）
+https://codeforfun.jp/how-to-install-xampp/
+
+https://arakan-pgm-ai.hatenablog.com/entry/2022/05/16/000000
+ブレークポイントでとまらない原因と対策／PHP7から8へ移行
+
+https://medium-company.com/vscode-php-%e3%83%87%e3%83%90%e3%83%83%e3%82%b0/#phpini
+VSCodeでPHPをデバッグする方法（Xdebug3）
+
+https://my-web-note.com/vscode-php-develop-debug/
+【2022年版】Visual Studio CodeでPHP開発環境＋デバッグ作業でステップ実行できるようにする方法
+
+https://blog.masuyoshi.com/xampp_develop/
+【超初心者向け】XAMPP開発環境の手順
+
+https://note.com/ego_project/n/nd7a56a8db2eb
+「VSCodeのXdebugが止まらない」が解決した一例
+
+https://programism.net/xampp-control-panel-quit-error/
+XAMPP Control PanelでQuitすると「アクセスが拒否されました」となる対応策

@@ -1,0 +1,42 @@
+https://zenn.dev/dragonarrow/articles/b3fbdf1718a812#%E6%88%90%E6%9E%9C%E7%89%A9
+PHP8, apache, MariaDB, XdebugによるDocker環境の作成
+
+
+https://brainlog.jp/server/docker/post-3106/
+ローカル環境でDocker×WordPressが重い問題を解決する
+
+
+https://docs.docker.jp/config/pruning.html#id3
+使用していない Docker オブジェクトの削除（prune）
+
+
+https://www.public.ne.jp/2020/12/14/%E3%80%90docker%E3%80%91%E7%AC%AC13%E5%9B%9E%E3%80%80dockerdesktop%E3%81%AE%E3%83%80%E3%83%83%E3%82%B7%E3%83%A5%E3%83%9C%E3%83%BC%E3%83%89%E3%81%8C%E9%80%B2%E5%8C%96%EF%BC%81/
+DockerDesktopのダッシュボードが進化！
+
+
+https://yokoyamadesuga.com/docker-wordpress-pnp-ini/
+Dockerで構築したWordPressにアップロード制限をpnp.iniで解除する方法
+
+
+https://www.vektor-inc.co.jp/post/upload_max_filesize/
+WordPressのファイルアップロード上限値を変更する方法
+
+
+https://qiita.com/tanakin_prog/items/6e6219a62e7a05eb22c2
+dockerの起動、停止、再起動
+
+https://labo.kon-ruri.co.jp/docker-edit-php-ini/
+Dockerで構築したWordPress環境でアップロードの2MB制限を外す方法
+
+
+https://qiita.com/arinc0/items/572c6fb20e7c5c2fac05
+php.ini の場所
+
+https://wordpress.com/ja/support/themes/uploading-setting-up-custom-themes/
+テーマをアップロードする
+
+
+https://wp-doctor.jp/knowhow/knowledge-base/%E3%83%AF%E3%83%BC%E3%83%89%E3%83%97%E3%83%AC%E3%82%B9%E3%81%AE%E3%83%86%E3%83%BC%E3%83%9E%E3%81%AEhtml%E3%82%92%E7%B7%A8%E9%9B%86%E3%81%97%E3%81%A6%E3%81%BF%E3%82%8B
+ワードプレスのテーマのHTMLを編集してみる 
+
+
